@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+import Styledpage from "./components/Styledhomepage"
+import FootballTeamList from "./components/FootballTeamList";
+import { people } from "./data/data";
+import Listexample from "./components/Listcomponent";
+import Info from "./components/Info";
+import StyledBox from "./components/simpleStyle";
+
+export default function Example() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Styledpage />
+      <Listexample />
+      <FootballTeamList teams={people} />
+      <StyledBox>
+        <Info />
+      </StyledBox>
     </div>
   );
 }
-
-export default App;
